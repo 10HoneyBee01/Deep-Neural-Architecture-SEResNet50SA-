@@ -85,7 +85,7 @@ python evaluate.py --dataset BreakHIS --magnification 100x
 
 ### Configuration
 
-You can adjust the hyperparameters, paths, and other configurations in the `config.yaml` file.
+You can adjust the hyperparameters, paths, and other configurations in the `config.yaml` file (If you use straight forward process as for modeling) or use the notebook process for integrate with the conda or jupyter notebook.
 
 ## Results
 
