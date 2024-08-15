@@ -21,8 +21,14 @@ This repository contains the implementation of the **SEResNet50SA** model, a nov
 
 The model was trained and tested on the following datasets:
 - **PCam**: PatchCamelyon dataset, focused on lymph node section images for binary classification of metastatic vs non-metastatic tissues.
+  ![PCam Dataset](4.png)
+*Figure 2: PCam Dataset.*
 - **BreakHIS**: Breast Cancer Histopathological Image Classification dataset, used for both binary and multiclass classification tasks across various magnifications (40x, 100x, 200x, 400x).
+  ![BreakHIS Dataset](breakhis.png)
+*Figure 2: BreakHIS Dataset.*
 - **BACH**: Breast Cancer Histology Challenge dataset, used for multiclass classification of breast tissue histology.
+  ![BACH Dataset](bach_copy.png)
+*Figure 2: BACH Dataset.*
 
 ## Model Performance
 
