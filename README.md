@@ -14,7 +14,7 @@ This repository contains the implementation of the **SEResNet50SA** model, a nov
   - **BreakHIS dataset**: 96% accuracy across 8 classes and multiple magnifications (40x, 100x, 200x, 400x)
   - **BACH dataset**: 100% accuracy across 4 distinct classes
 - **Versatility Across Datasets**: Validated on three diverse medical datasets: PCam (lymph node sections), BreakHIS (breast cancer histopathology images), and BACH (breast tissue histology).
-  
+
 ## Datasets
 
 The model was trained and tested on the following datasets:
@@ -34,10 +34,82 @@ The model was trained and tested on the following datasets:
 
 ## Installation
 
-To use this repository, follow the steps below:
+### Set up the environment:
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/your-username/your-repository.git
-   cd your-repository
+We recommend using a virtual environment or Conda to manage dependencies.
 
+```bash
+# Create a new conda environment with Python 3.8
+conda create -n seresnet50sa python=3.8
+# Activate the environment
+conda activate seresnet50sa
+```
+
+### Install dependencies:
+
+Install the required packages using `requirements.txt`.
+
+```bash
+pip install -r requirements.txt
+```
+
+## Usage
+
+### Training the Model
+
+To train the model on your local machine, execute the following command:
+
+```bash
+python train.py --dataset <dataset_name> --epochs <num_epochs> --batch_size <batch_size> --magnification <magnification_level>
+```
+
+Example:
+
+```bash
+python train.py --dataset PCam --epochs 50 --batch_size 32
+```
+
+### Evaluation
+
+To evaluate the trained model on test datasets:
+
+```bash
+python evaluate.py --dataset <dataset_name> --magnification <magnification_level>
+```
+
+Example:
+
+```bash
+python evaluate.py --dataset BreakHIS --magnification 100x
+```
+
+### Configuration
+
+You can adjust the hyperparameters, paths, and other configurations in the `config.yaml` file.
+
+## Results
+
+The SEResNet50SA model has consistently outperformed traditional deep learning models by leveraging SE blocks and attention mechanisms, ensuring high precision and reliability in cancer tissue classification across multiple datasets.
+
+- **PCam**: 99.88% accuracy
+- **BreakHIS**: 99.29% accuracy (binary), 96% accuracy (multi-class)
+- **BACH**: 100% accuracy
+
+## Citation
+
+If you use this code for your research, please consider citing the following paper:
+
+```bibtex
+@article{hasan2024seresnet50sa,
+  title={A Depth Analysis on Lymphatic Node Metastatic, Non-metastatic, and Cancerous Tissue Classification using Novel Deep Neural Architecture},
+  author={Md. Mahedi Hasan Joy, Muhammad Nazrul Islam, Mohammad Ali Moni, Yasushi Inoguchi, Faiz Al Faisal},
+  journal={Journal of Medical Imaging and Deep Learning},
+  year={2024},
+  volume={xx},
+  pages={xx--xx}
+}
+```
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
