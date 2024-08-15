@@ -3,7 +3,7 @@
 ## Overview
 
 This repository contains the implementation of the **SEResNet50SA** model, a novel deep neural architecture optimized for both binary and multiclass classification of medical images. The model integrates squeeze-and-excitation (SE) mechanisms with ResNet50 and Self-Attention to achieve state-of-the-art performance on several medical image datasets.
-![Model Architecture](path/to/architecture_image.png)
+![Model Architecture](model_updated.PNG)
 *Figure 1: Architecture of SEResNet50SA.*
 
 ## Key Features
